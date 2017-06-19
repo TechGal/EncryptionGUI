@@ -101,7 +101,7 @@ public class Cesar {
         JButton decrypttxt = new JButton("Decrypttxt");
         JPanel labels = new JPanel();
 
-        JLabel original = new JLabel("Original Text");
+        JLabel original = new JLabel("               ");
         JLabel encrypted = new JLabel("Encrypted Text");
 
         window[0].setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -154,8 +154,7 @@ public class Cesar {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Message is: " + entertxt.getText() + ", key is: " + key.getText());
-                original.setText(entertxt.getText());
-                original.setVisible(true);
+
                 encrypted.setText(encrypt(entertxt.getText().toUpperCase(), key.getText().toUpperCase()));
                 encrypted.setVisible(true);
             }
@@ -165,8 +164,8 @@ public class Cesar {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Message is: " + entertxt.getText() + ", key is: " + key.getText());
-                original.setText(entertxt.getText());
-                original.setVisible(true);
+                System.out.println("Decrypted is: " + decrypt(entertxt.getText().toUpperCase(), key.getText().toUpperCase()));
+
                 encrypted.setText(decrypt(entertxt.getText().toUpperCase(), key.getText().toUpperCase()));
                 encrypted.setVisible(true);
             }
