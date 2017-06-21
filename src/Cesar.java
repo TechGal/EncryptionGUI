@@ -3,7 +3,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Scanner;
 import javax.swing.*;
-import javax.swing.JOptionPane;
 
 /**
  * Created by Aila on 2017-05-26.
@@ -25,13 +24,6 @@ public class Cesar {
         Cesar cesar = new Cesar();
         cesar.window();
     } //main
-
-    public static void submitted (String key, String msg) {
-        String m = msg.toUpperCase();
-        String k = key.toUpperCase();
-
-        emsg = encrypt(msg, key);
-    }
 
     public static String encrypt (String msg, String key) {
         key = key.substring(0,1);
